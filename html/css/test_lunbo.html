@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #slider{
+            position: relative;
+            width: 730px;
+            height: 454px;
+            overflow: hidden;
+        }
+        #slider ul{
+            position: relative;
+            animation: anims 10s infinite ease-in-out alternate;
+        }
+
+
+        @keyframes anims {
+            0%{
+              top:0;
+            }
+            50%{
+              top: -454px;
+            }
+            100%{
+                top: -908px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+  <div id="slider">
+    <ul>
+        <li>
+            <a href=""> <img src="http://img12.360buyimg.com/da/jfs/t2146/139/1446536217/98035/c6888bf9/56a05078N6add136b.jpg" alt=""> </a>
+        </li>
+        <li>
+            <a href=""> <img src="http://img20.360buyimg.com/da/jfs/t2371/1/2017035119/102726/7701b5b0/569f00f6N54856568.jpg" alt=""> </a>
+        </li>
+        <li>
+            <a href=""> <img src="http://img13.360buyimg.com/da/jfs/t2542/83/1241281238/100625/fb471b02/5698a582N1c889ce3.jpg" alt=""> </a>
+        </li>
+    </ul>
+
+  </div>
+
+</body>
+</html>

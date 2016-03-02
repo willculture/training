@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a {
+            display: inline-block;
+            background-color: #666666;
+            color: #fff;
+            padding: 10px 50px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+        a:after {
+            content: " ";
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top:0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        a:hover:after {
+            animation: anims 1s;
+        }
+
+        @keyframes anims {
+            from {
+                background: rgba(0, 0, 0, 0.25);
+                transform: scale(0);
+            }
+            to {
+               background: transparent;
+                transform: scale(2);
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+     <a href="">
+         hover
+     </a>
+
+</body>
+</html>

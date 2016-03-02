@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #show:before{
+            content: normal;
+        }
+        #show:after{
+            content: none;;
+        }
+
+        .planets {
+            counter-increment: planetIndex;
+        }
+
+        .planets::before {
+            content: counter(planetIndex) ". ";
+        }
+    </style>
+</head>
+<body>
+
+    <div id="show"></div>
+
+
+    <h2>Name of First Four Planets</h2>
+    <p class="planets">Mercury</p>
+    <p class="planets">Venus</p>
+    <p class="planets">Earth</p>
+    <p class="planets">Mars</p>
+</body>
+</html>

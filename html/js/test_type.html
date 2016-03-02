@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+
+
+      "use strict";
+      function user(){
+          this.name  = "我";
+      }
+
+      var gol = 5;
+      function abc(a){
+          a.name = "来了";
+          var gol = 10;
+          console.log(gol);
+      }
+      var u = new user();
+      abc(u)
+      console.log(u.name)
+
+      console.log(gol);
+
+
+
+
+  </script>
+</body>
+</html>

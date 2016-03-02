@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        :target{
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+   <!--
+     之前:target伪类,我们已经接触过了. :target是css中伪类,主要是应用在url中的#链接,以及匹配对应的id名称.例如下面的例子:
+
+     [http://www.wutongwei.com/#home]
+
+     对应的home 的结构为
+
+    <section id="home">
+         this is target
+    </section>
+
+    这种状态,我们可以通过CSS来体现他的效果.
+
+    :target{
+       color:#ff6600;
+    }
+    这时候,当浏览这个链接的时候,就会将对应的有id的元素设置他的文字颜色为#ff6600;
+    一个页面当然可以有多个target的目标,这时候,这个伪类的样式就是用所有的target目标,如果我们只是改变某个target目标的话.
+    这时候我们最好是在CSS上做好选择器的处理.比如
+    <section id="home">
+        this is target
+    </section>
+
+    <section id="second">
+        this is another target
+    </section>
+    CSS上则使用:
+    #home:target{
+       color:#ff6600;
+    }
+    这时候,当浏览http://www.wutongwei.com/#second的时候就不会应用伪类的CSS样式了.
+
+    target伪类使用经验:
+    1. 在在页面上做跳转时,要显示某种状态.
+    2. 有必要使用这个状态的元素.
+    3. 接受浏览器的history.
+
+    像target这种行为,我们可以在页面上的章节跳转或者评论第跳转等目标跳转.
+    或者使用在我们常说的tabs上使用.之前我们通常是使用JS来完成tabs的操作.现在可以通过这个伪类来实现.还有就是菜单都可以用这个来实现等等.
+
+
+   -->
+
+    <section id="home">
+        this is target
+    </section>
+
+    <section id="second">
+        this is another target
+    </section>
+
+</body>
+</html>

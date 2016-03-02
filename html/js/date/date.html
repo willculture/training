@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   <script>
+
+
+       var i = 1;
+      var ds = setInterval(function () {
+          if(i==11){
+              console.log("已经过去10秒");
+              if(ds){
+                  clearInterval(ds);
+                  return;
+              }
+          }
+          var date = new Date();
+          console.log(date)
+          i++;
+
+      },1000);//1000 -- 1秒
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DOM Tree</title>
+
+    <script>
+
+
+        function load() {
+
+            function jiafa(x, y) {
+                return x + y;
+            }
+
+            var h2 = document.getElementsByTagName("h2");
+            var h2_zhi = h2[0].innerText; //获取值
+            console.log(h2_zhi);
+
+            h2[1].innerHTML = "我已插入: " + jiafa(10, 20); //改变值
+
+
+            var shuoming = document.getElementById("shuoming");
+
+            shuoming.innerHTML = "<h6> 我已改变 </h6>";
+        }
+    </script>
+
+</head>
+<body onload="load()">
+<h2>Testing <strong>哈哈</strong></h2>
+<h2>kljfsdkljf</h2>
+<p id="shuoming">welcome to <i>JavaScript</i>...</p>
+
+
+</body>
+</html>

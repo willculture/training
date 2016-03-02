@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>media Test</title>
+    <style>
+
+        .box {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: #dd483f;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 360px) {
+
+            body {
+                background-color: #ff3300;
+            }
+
+            .box {
+                float: none;
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+        }
+        @media print {
+            h3 {
+                color: #ff5500;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h3>我们的青春故事</h3>
+    <p>这里是故事的开张.........................</p>
+
+    <div class="box">
+        box1
+    </div>
+
+    <div class="box">
+        box2
+    </div>
+
+</body>
+</html>

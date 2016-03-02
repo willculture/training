@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+     <label>计时:</label> <input type="text" name="" id="timer"/> <button state="on" onclick="pause(this)" id="pause">暂停</button> <button onclick="restart()">重新开始</button>
+
+     <script>
+           var ele_timer = document.getElementById("timer");
+           var n_sec = 0;  //秒
+           var n_min = 0;  //分
+           var n_hour = 0; //时
+
+           //60秒 === 1分
+           //60分 === 1小时
+           function timer() {
+              return setInterval(function () {
+
+                  var str_sec = n_sec;
+                  var str_min = n_min;
+                  var str_hour = n_hour;
+                  if ( n_sec < 10) {
+                      str_sec = "0" + n_sec;
+                  }
+                  if ( n_min < 10 ) {
+                      str_min = "0" + n_min;
+                  }
+
+                  if ( n_hour < 10 ) {
+                      str_hour = "0" + n_hour;
+                  }
+
+                  var time = str_hour + ":" + str_min + ":" + str_sec;
+                  ele_timer.value = time;
+                  n_sec++;
+                  if (n_sec > 59){
+                      n_sec = 0;
+                      n_min++;
+                  }
+                  if (n_min > 59) {
+                      n_sec = 0;
+                      n_hour++;
+                  }
+
+
+               }, 1000);
+           }
+
+         var n_timer = timer();
+
+           //暂停和继续
+         function pause(self) {
+             var state = self.getAttribute("state");
+             if (state === "on") {
+                 clearInterval(n_timer);
+                 self.textContent = "继续";
+                 self.setAttribute("state", "off");
+             } else {
+                 n_timer = timer();
+                 self.textContent = "暂停";
+                 self.setAttribute("state", "on");
+             }
+
+         }
+
+           //重新开始
+         function restart() {
+             clearInterval(n_timer);
+             n_sec = 0;
+             n_min = 0;
+             n_hour = 0;
+             n_timer = timer();
+
+             var ele_pause = document.getElementById("pause");
+             ele_pause.textContent = "暂停";
+             ele_pause.setAttribute("state", "on");
+         }
+
+
+     </script>
+</body>
+</html>

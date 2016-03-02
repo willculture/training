@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            counter-reset: issues 1;
+        }
+        .issue:before{
+            counter-increment: issues 2;
+            content: "Issue " counter(issues,decimal);
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+       <div class="container">
+           <div class="issue">hello</div>
+           <div class="issue">hello</div>
+           <div class="issue">hello</div>
+           <div class="issue">hello</div>
+       </div>
+</body>
+</html>

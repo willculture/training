@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul,li{
+            list-style: none;
+        }
+
+        ul{
+            margin: 0 auto;
+            width: 600px;
+            height: 300px;
+            background-color: #ff3300;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        li{
+          display: inline-block;
+            margin: 5px;
+        }
+        li > a{
+            border: #eee 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            color: #fff;
+            text-decoration: none;
+        }
+        li > a:hover,ul > li:target a{
+            width: 100px;
+            height: 100px;
+        }
+        ul > li:target{
+            position: relative;
+            animation: anims 1.5s ease-out;
+        }
+
+        ul > li:target:after{
+            position: absolute;
+            content: "*";
+            color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+        @keyframes anims {
+            0%{
+               top:0;
+            }
+            25%{
+                top:-20px;
+            }
+            50%{
+                top:0;
+            }
+            75%{
+               top:-20px;
+            }
+            100%{
+               top:0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <ul>
+         <li id="menu1">
+             <a href="#menu1">
+                 菜单一
+             </a>
+         </li>
+         <li id="menu2">
+             <a href="#menu2">
+                 菜单二
+             </a>
+         </li>
+         <li id="menu3">
+             <a href="#menu3">
+                 菜单三
+             </a>
+         </li>
+     </ul>
+</body>
+</html>

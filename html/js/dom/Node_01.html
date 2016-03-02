@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="w">
+    <div id="logo-2014" name="logo"><!--注释--><a href="//www.jd.com/" class="logo">京东</a>
+    </div>
+    <div id="search-2014">
+
+        <div class="form">
+            <input  type="text" id="key"  class="text">
+            <button class="button cw-icon">搜索</button>
+        </div>
+    </div>
+    <div id="settleup-2014" class="dorpdown">
+        <a target="_blank" href="//cart.jd.com/cart/cart.html">我的购物车</a>
+    </div>
+    <div id="hotwords-2014">
+        <a href="http://sale.jd.com/act/2pYgOwefyuQ06Ds.html?spm=1.1.0" target="_blank" class="style-red">微信红包</a>
+        <a href="http://sale.jd.com/act/AWhnH15p2qVJ.html?spm=1.1.1" target="_blank" >每日特惠</a>
+    </div>
+</div>
+
+<script>
+
+    var logo_2014 = document.getElementById("logo-2014");
+    logo_2014.firstChild.nodeValue = "我是注释";
+    logo_2014.lastChild.nodeValue = "我是空文本";
+    var xiongdi =  logo_2014.firstChild.nextSibling;//兄弟节点的获取
+    var fuzhidejiedian = xiongdi.cloneNode(true); //复制节点
+    fuzhidejiedian.textContent = "吴统威 "; //改变标签元素内容
+    logo_2014.insertBefore(fuzhidejiedian,logo_2014.firstChild.nextSibling);
+    var haizi = logo_2014.childNodes;
+    console.log(haizi)
+
+</script>
+
+
+</body>
+</html>

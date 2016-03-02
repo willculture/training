@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onkeypress="anjian(event)">
+
+     <div id="xianshi"></div>
+
+     <a href="#" onclick="jiafa(this)">
+         +
+     </a>
+
+
+  <script>
+
+      function jiafa(e){
+         var xianshi =  document.getElementById("xianshi");
+         xianshi.textContent = e.textContent;
+      }
+
+      function anjian(e){
+          var zifu = "";
+          var xianshi =  document.getElementById("xianshi");
+          if(e.charCode == 103){
+              xianshi.textContent = "我按下了G键";
+          }
+
+
+      }
+
+  </script>
+
+</body>
+</html>

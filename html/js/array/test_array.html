@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> hello </title>
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px;
+            color: #fff;
+            border: #eee 2px solid;
+        }
+        div > span{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+            animation: anims 1s ease-in;
+        }
+
+        @keyframes anims {
+            0% {
+                right: 0px;
+                top: 0;
+                transform: scale(0);
+
+                opacity: 0.2;
+            }
+            50%{
+                top: 0;
+                right: -300px;
+                transform: scale(0.5);
+
+                opacity: 0.6;
+            }
+
+            90%{
+                top: 0;
+                right: -10px;
+                transform: scale(0.99);
+                opacity: 0.9;
+            }
+
+            100%{
+                top: 0;
+                right:0px;
+                transform: scale(1);
+                opacity: 1;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+  <div><span>☺</span></div>
+
+</body>
+</html>

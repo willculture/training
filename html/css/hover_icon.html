@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .hover {
+            display: inline-block;
+            font-weight: bold;
+            color: #ff5500;
+            margin: 100px auto;
+            border: #ff5500 2px solid;
+            position: relative;
+            overflow: hidden;
+        }
+        .hover span {
+            display: inline-block;
+            transition: all 0.3s ease;
+            padding: 5px;
+            font-size: 30px;
+        }
+        .icon {
+            position: absolute;
+            left: -60px;
+            top: 0;
+            transition: all 0.3s ease;
+            background-color: #ff5500;
+            color: #fff;
+        }
+
+        .hover:hover .icon {
+            left: 0;
+        }
+        .hover:hover .text {
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="hover">
+        <span class="icon">☆</span>
+        <span class="text">图标动画</span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    var Person = function () {
+        this.name = "Will";
+        this.age = 20;
+        this.say = function () {
+            console.log("I say:" + this.name + "," + this.age);
+        }
+    }
+
+    Person.prototype.hello = function () {
+        console.log("hello")
+    }
+
+    var person = new Person();
+    person.say();
+
+
+    var Student = function () {
+        Person.apply(this);
+    }
+    Student.prototype = Object.create(Person.prototype);
+    Student.prototype.hello = function(){
+        console.log("s hello")
+    }
+    console.log(Student.prototype.constructor)
+    var stu = new Student();
+    stu.say();
+    stu.hello();
+
+    person.hello();
+
+
+</script>
+</body>
+</html>

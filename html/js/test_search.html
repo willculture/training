@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        a:hover {
+            background-color: #ff3300;
+            color: #fff;
+        }
+        ul, li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .search {
+            display: inline-flex;
+            height: 35px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .search input {
+            border: #eee 1px solid;
+            background-color: #fff;
+            outline: none;
+            width: 200px;
+            padding: 0 5px;
+        }
+        .search button {
+            background-color: #ff3300;
+            color: #fff;
+            border: none;
+            width: 80px;
+        }
+        .search ul {
+            position: absolute;
+            left: 0;
+            top: 35px;
+            border: #eee 1px solid;
+            min-width: calc(100% - 80px);
+            text-align: left;
+            visibility: hidden;
+        }
+        .search ul a {
+            display: block;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+                <div class="search">
+                    <input type="text" value="" id="key">
+                    <button>搜索</button>
+                    <ul id="datalist">
+                        <!--<li><a href="#">武林外传</a> </li>-->
+                        <!--<li><a href="#">葵花宝典</a> </li>-->
+                        <!--<li><a href="#">如来佛掌</a> </li>-->
+                        <!--<li><a href="#">九阴白骨爪</a> </li>-->
+                    </ul>
+                </div>
+
+<script>
+    //定义一些数据
+    var data = ["编程的人", "武林外传", "葵花宝典", "九阴白骨爪", "武林江湖", "will"];
+    var ele_key = document.getElementById("key");
+    ele_key.onkeyup = function (e) {
+
+        var val = this.value;
+
+        //获取输入框里匹配的数据
+        var srdata = [];
+        for (var i = 0; i < data.length; i++) {
+            console.log(data[i].indexOf(val))
+            if (val.trim().length > 0 && data[i].indexOf(val) > -1) {
+                  srdata.push(data[i]);
+            }
+        }
+
+        //获取到的数据准备追加显示, 前期要做的事情: 清空数据,然后显示数据列表,如果获取到的数据为空,则不显示
+        var ele_datalist = document.getElementById("datalist");
+        ele_datalist.style.visibility = "visible";
+        ele_datalist.innerHTML =  "";
+
+        if (srdata.length == 0) {
+            ele_datalist.style.visibility = "hidden";
+        }
+
+        //将搜索到的数据追加到显示数据列表, 然后每一行加入点击事件, 点击后将数据放入搜索框内, 数据列表隐藏
+        var self = this;
+        for (var i = 0; i < srdata.length; i++) {
+            var ele_li = document.createElement("li");
+            var ele_a = document.createElement("a");
+            ele_a.setAttribute("href", "javascript:;");
+            ele_a.textContent = srdata[i];
+
+            ele_a.onclick = function () {
+                 self.value = this.textContent;
+                ele_datalist.style.visibility = "hidden";
+            }
+
+
+            ele_li.appendChild(ele_a);
+            ele_datalist.appendChild(ele_li);
+        }
+
+    }
+</script>
+
+</body>
+</html>

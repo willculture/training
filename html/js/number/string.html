@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Basic Syntax for the content Property</p>
+    <p>我是中国人</p>
+
+    <p></p>
+
+   <script>
+         var p = document.getElementsByTagName("p")[0];
+
+         //长度使用
+         var cd = p.textContent.length;
+         console.log(cd)
+
+        var p2 = p.nextSibling.nextSibling;
+
+       var p2cd = p2.textContent.length;
+
+       console.log("第二个P长度:",p2cd);
+
+       //获取单个字符
+
+       var wz = p2.textContent.charAt(2);
+       console.log(wz)
+
+       var uwz = p2.textContent.charCodeAt(2);
+       console.log(uwz);
+
+       var ua = p.textContent.charCodeAt(1);
+       console.log(ua)
+
+       //字符串拼接
+       var p3 = document.getElementsByTagName("p")[2];
+       var pj =  p.textContent.concat(p2.textContent,"我是加入的字符");
+       p3.textContent = pj;
+
+       //字符串查找
+       var weizi = p3.textContent.indexOf("中");
+       console.log(weizi)
+
+       var zuihou = p3.textContent.lastIndexOf("我");
+       console.log(zuihou)
+
+       //给字符串加链接
+        var linkwz = p.textContent.link("http://www.google.com");
+       console.log(linkwz)
+       p2.textContent = p2.innerHTML.concat(linkwz);
+
+       //match
+      var mczi = p2.textContent.match(/\t+/);
+       console.log(mczi)
+       //字符串替换
+       var thdwz = p3.textContent.replace(/我/g,"你")
+       console.log(thdwz)
+
+       //分割字符串
+       var wzsz = p2.textContent.split("\"");
+       console.log(wzsz)
+
+   </script>
+</body>
+</html>

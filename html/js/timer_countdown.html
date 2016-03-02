@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时实现</title>
+    <style>
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #countdown {
+            font-size: 50px;;
+            width: 350px;
+            margin: 0 auto;
+            background-image: url("http://new.forest.go.th/nakhonphanom/wp-content/uploads/sites/52/2015/08/bg-wood-1024x576.jpg");
+            color: #fff;
+            padding: 100px;
+            font-weight: bolder;
+        }
+        #countdown ul {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        #countdown ul li{
+            display: inline-block;
+            margin-left: 10px;
+        }
+        #countdown ul li:last-child {
+            margin-right: 10px;
+        }
+
+        #countdown ul li strong {
+            text-shadow: 5px 5px 5px #000;
+        }
+        #countdown ul li strong,  #countdown ul li span {
+            display: block;
+            text-align: center;
+        }
+        #sec {
+            color: #ff0000;
+            text-shadow: 5px 5px 2px #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown">
+        <ul>
+            <li>
+                <strong id="day">00</strong>
+                <span>天</span>
+            </li>
+            <li>:</li>
+            <li>
+                <strong id="hour">00</strong>
+                <span>时</span>
+            </li>
+            <li>:</li>
+            <li>
+                <strong  id="min">00</strong>
+                <span>分</span>
+            </li>
+            <li>:</li>
+            <li>
+                <strong  id="sec">00</strong>
+                <span>秒</span>
+            </li>
+        </ul>
+    </div>
+
+
+
+   <script>
+
+       var t_endtime = new Date("2016-05-22 00:00:00"); //结束时间
+
+       var ele_day = document.getElementById("day");
+       var ele_hour = document.getElementById("hour");
+       var ele_min = document.getElementById("min");
+       var ele_sec = document.getElementById("sec");
+
+
+       // 时间换算规则
+       var t_day = 60 * 60 * 24;
+       var t_hour = 60 * 60;
+       var t_min = 60;
+
+       setInterval(function () {
+           //获取当前时间
+           var t_currenttime = new Date();
+           //结束时间 - 当前时间 = 剩余时间
+           var t_result = t_endtime.getTime() - t_currenttime.getTime();
+
+           //剩余时间换算
+           var t_time = Math.floor( t_result / 1000 );
+           var t_result_day = Math.floor( t_time / t_day );
+           var t_result_hour = Math.floor( t_time % t_day / t_hour);
+           var t_result_min = Math.floor(t_time % t_day % t_hour/ t_min);
+           var t_result_sec = Math.floor( t_time % t_day % t_hour % t_min);
+
+           // 将时间小于10的,在值前面加入0;
+           if ( t_result_day < 10) {
+               t_result_day = "0" + t_result_day;
+           }
+
+           if ( t_result_hour < 10) {
+               t_result_hour = "0" + t_result_hour;
+           }
+
+           if ( t_result_min < 10) {
+               t_result_min = "0" + t_result_min;
+           }
+
+           if ( t_result_sec < 10) {
+               t_result_sec = "0" + t_result_sec;
+           }
+
+           //显示到页面上
+           ele_day.textContent = t_result_day;
+           ele_hour.textContent = t_result_hour;
+           ele_min.textContent = t_result_min;
+           ele_sec.textContent = t_result_sec;
+
+       }, 1000);
+
+
+//       console.log(t_result_day, t_result_hour,t_result_min, t_result_sec);
+
+
+
+
+   </script>
+</body>
+</html>

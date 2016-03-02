@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <script>
+
+       var gq = new Date(2015,11,12,9,22,11);
+       var date = new Date();
+
+       var gqsz = gq.getTime();
+       var sjsz =  date.getTime();
+
+       console.log(gqsz > sjsz); // false
+
+       //得出相差多久时间
+       var xcz = sjsz - gqsz;
+
+       console.log(xcz/(1000*60*60*24),"天");
+
+
+
+
+   </script>
+</body>
+</html>

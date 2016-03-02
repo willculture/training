@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <script>
+
+       add();
+       add(10,20); //函数调用
+
+       add(5 , 10);//
+
+       function  add(x,y){
+           var result = x + y;
+           console.log( result );//
+       }
+
+       //乘法
+       var multiplication = function( x , y ){
+           var result = x * y;
+           return result; //返回语句
+       }
+
+       var mul = multiplication(10,2);
+       console.log(mul);
+
+       //除法
+//       var division = new Function("x","y"," var result = x / y;" +
+//               "return result;");
+//
+//       ==>
+       function division(x,y){
+           var result = x / y;
+           return result;
+       }
+       var division_result = division(10,2);
+       console.log(division_result);
+
+   </script>
+</body>
+</html>
