@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	   //
+	    var obj = {
+		   name: "Tom"
+		}
+		
+		var obj2 = {
+		  age: 20
+		}
+		
+		var obj3 = {
+		  say: function() {
+		     console.log(this.name);
+		  }
+		}
+		
+		var result = Object.assign(obj, 20, "中国人的样子", [12, 30, 42, 50], null, obj2, obj3);
+		
+		console.log(result, obj);
+		
+		obj.say();
+		 
+		
+	</script>
+</body>
+</html>

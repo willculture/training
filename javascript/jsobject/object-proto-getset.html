@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	   
+	    var tem = 20;
+	    var obj = {
+		  name: "Tom",
+		  /*set age(val) {
+		    tem = val;
+		  },
+		  get age() {
+		    return tem;
+		  }*/
+		}
+		
+		Object.defineProperty(obj, "age", {
+		   get: function () {
+		     return tem;
+		   },
+		   set: function (val) {
+		      tem = val;
+		   }
+		});
+		
+		/*
+		obj.__defineGetter__("age", function () {
+		     return tem;
+		})
+		
+		obj.__defineSetter__("age", function (val) {
+		    tem = val;
+		}) */
+		
+		obj.age = 10;
+		console.log(obj.age); 
+		console.log(obj);
+		
+		
+		//
+		var rs = obj.__lookupGetter__("age");
+		var setrs = obj.__lookupSetter__("age");
+		console.log(rs, setrs);
+	  
+	</script>
+</body>
+</html>

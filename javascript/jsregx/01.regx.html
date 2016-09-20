@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+        var regx = new RegExp("hello","g");
+		var regx2 = /hello/;
+		
+		console.log(regx.test("hello world"), regx2.test("hi Tom"));
+		
+		console.log([].constructor());
+		console.log({}.constructor());
+		console.log(regx.exec("hello world, hello Tom").constructor(), regx2.exec("hi Tom"));
+	</script>
+</body>
+</html>

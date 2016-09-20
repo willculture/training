@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <a href="http://www.bianchengderen.com">编程的人</a>
+	<script type="text/javascript">
+	    var anode = document.querySelector("a");
+		
+		//anode.parentNode.removeChild(anode);
+		var h3 = document.createElement("h3");
+		h3.textContent = "替换好的节点";
+		
+		anode.parentNode.replaceChild(h3, anode);
+		
+	</script>
+</body>
+</html>

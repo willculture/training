@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	   
+	   //new Object();
+	   var obj = {
+	      name: "Tom",
+		  age: 20,
+		  say: function () {}
+	   }
+	   
+	   Object.setPrototypeOf(obj, {
+	     say: function () {}
+	   })
+	   
+	   var rs = Object.getOwnPropertyDescriptor(obj, "name");
+	   console.log(rs);
+	   
+	   var names = Object.getOwnPropertyNames(obj);
+	   console.log(names);
+	   
+	   var keys = Object.keys(obj);
+	   
+	   console.log(keys)
+	   
+	   var sb = Object.getOwnPropertySymbols(obj);
+	   console.log(sb);
+	   
+	   
+	   
+	   function Person () {
+	     this.name = "Person";
+	   }
+	   
+	   Person.prototype.say = function () {};
+	   
+	   
+	   var proto = Object.getPrototypeOf(obj);
+	   console.log(proto)
+	
+	
+	</script>
+</body>
+</html>

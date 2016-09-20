@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+	
+	debug = true;
+	
+	function log(code, msg) {
+	   alert(code + " : " + msg);
+	   
+	}
+	
+	
+	try {
+	   a;
+	}catch(e) {
+	   if(debug) {
+	     console.error(e);
+	   } else {
+	     log(00001, "系统繁忙, 请稍后再试!");
+	   }   	   	   
+	}
+	
+	</script>
+	
+	
+</body>
+</html>

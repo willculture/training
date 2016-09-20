@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	   function MyError(msg) {
+	      this.name = "MyError";
+		  this.message = msg || "throw my Error";
+	   }
+	   
+	   MyError.prototype = Object.create(Error.prototype);
+	   
+	   MyError.prototype.constructor = MyError;
+	   
+	   console.log(MyError.prototype);
+	   try {
+	    throw new MyError("hello");
+	   }catch( e ) {
+		  console.log(e);
+	   }
+	   
+	</script>
+</body>
+</html>

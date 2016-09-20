@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	    
+		var a = 100;
+		//window.a = a;
+		function show() {
+		  b = 200; // 全局变量
+		  var c = 150; // 局部变量
+		  if(true) {		    
+		     document.write("->" + c);
+		  }
+		  document.write("我的分数是: " + a + ":" + b + ":" + c +"->");
+		}
+		
+		show();
+		
+		document.write("他的分数是: " + a + ":" + b + ":" + c);
+		
+	 
+	 
+	</script>
+</body>
+</html>

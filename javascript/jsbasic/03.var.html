@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+     <title>变量</title>
+  </head>
+  <body>
+     <script>
+	    
+		
+		  //1. 变量大小写敏感
+		  //2. 变量名不能是关键词(JS里的保留字)
+		  //3. 变量只能是字母,数字, 下划线_,$构成
+		  //4. 变量只能是字母,_,$开头
+		
+		  var name = "李四\"句子\""; // 字符串
+		  var age = 20;
+		  var score = 200.123; 
+		  var state = true; // 布尔类型的值, 只有两个 true, false;
+		  var empty = null; 
+		
+		  document.write(name + "今年 " + age + " <br/>" + state + score);		  
+		  document.write(name + "明年 " +age + ". <br/>");
+		  
+		  document.write(20 == "20");// true; 值的匹配
+		  document.write("<br/>")
+		  document.write(20 === "20"); // false; // 值和类型的匹配
+		  
+		  document.write("<br/>")
+		  var x;
+		  
+		  document.write(x);//undefiend		  
+		  //y;//错误
+		  
+		 
+	   
+	 </script>
+  </body>
+</html>

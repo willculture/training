@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script>
+	   window.onerror = function (msg, file, line, col, error) {
+	      console.log("onerror");
+		  console.log(msg, file);
+		  console.log(line, col);
+		  console.log(error);
+	   }
+	   
+	</script>
+</head>
+<body>
+   
+   
+    <img id="img" src="http://www.baidu.com/1.png" />
+
+	<script type="text/javascript">
+	    	//a;
+			document.getElementById("img").onerror = function (e) {
+			  console.log(e);
+			}
+	</script>
+</body>
+</html>

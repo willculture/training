@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	    try{
+		  a;
+		}catch(e) {
+		   if(e instanceof ReferenceError) {
+		      console.log("引用错误: " + e.message);
+		   } else if (e instanceof TypeError) {
+		      console.log("类型错误: " + e.message);
+		   }
+		   
+		}finally {
+		  console.log("finally");
+		}
+		console.log("Program End");
+		
+	    
+	</script>
+</body>
+</html>

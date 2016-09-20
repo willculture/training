@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            text-align: center;
+        }
+        .checkbox {
+            width: 500px;
+            height: 200px;
+            border: #1A9909 1px solid;
+            margin: 0 auto;
+        }
+
+        .i-check {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            margin: 20px auto;
+
+        }
+        .i-check input[type=checkbox] {
+           opacity: 0;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        .i-check label {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #1A9909;
+            border-radius: 4px;
+        }
+
+        .i-check  label:after {
+            content: '';
+            width: 9px;
+            height: 5px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border: 3px solid #fff;
+            border-top: none;
+            border-right: none;
+            background: transparent;
+            opacity: 0;
+            transform: rotate(-45deg);
+        }
+        .i-check input[type=checkbox]:checked + label:after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+   <div class="checkbox">
+      <h3 style="color: #1A9909">绿色的复选框</h3>
+
+      <div class="i-check">
+          <input type="checkbox" value="0" />
+          <label></label>
+      </div>
+
+       <p style="margin-top: 80px;color: #1A9909 ">纯CSS实现的复选框的按钮样式, 同理也可以实现radio按钮样式.</p>
+   </div>
+</body>
+</html>

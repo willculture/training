@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+   <script>
+     var date1 = new Date();
+	 console.log(date1, date1.getTime());
+	 
+	 var date2 = new Date(2016, 7, 8, 21, 41, 50);
+	 console.log(date2, date2.getTime());
+	 
+	 var date3 = new Date(date2.getTime());
+	 console.log(date3, date3.getTime());
+	 
+	 var date4 = new Date("2016-08-08T13:41:50Z"); //世界时间
+	 console.log(date4, date4.getTime());
+	 
+	</script>
+
+</body>
+</html>

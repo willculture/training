@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	    
+		var result = "  hello".concat(" ","World"," ", "hi", "!   ");		
+		console.log(result);
+		var arr = result.split(/ /);
+		console.log(arr)
+		
+		var rp = result.replace(/(hi)/,"tom $1 ");
+		console.log(rp)
+		
+		var up = result.toUpperCase();
+		
+		console.log(up);
+		
+		var low = result.toLowerCase();
+		
+		console.log(low);
+		
+		var trim = result.trim();
+		
+		console.log(trim);
+		
+		
+		
+		
+		var code = String.fromCharCode(97,98,99);
+		
+		console.log(code);
+		
+		
+		var anchor = result.anchor("test");
+		
+		console.log(anchor);
+		
+		var link = result.link("http://www.wutongwei.com");
+		
+		console.log(link)
+     
+	</script>
+</body>
+</html>

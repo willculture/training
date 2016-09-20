@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	    function base(name) {
+		   this.name = name || "hello";
+		}
+		base.prototype.no = 0;
+		function Cat() {
+		   this.age = 12;
+		}
+		
+		Cat.prototype = new base("test");
+	    Cat.prototype = base.prototype;	
+		 
+		var cat = new Cat();
+		var cat2 = new Cat();
+		cat.no = 12;
+		cat2.no = 20;
+		console.log(cat.no, cat2.no);
+		
+		
+		
+		
+		console.log(cat.__proto__);
+		
+	
+		
+		console.log(cat.name, cat.no);
+	   
+	</script>
+</body>
+</html>

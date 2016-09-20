@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+	    
+		var obj = {
+		  name: "Tom"
+		}
+		var a = 20;
+		Object.defineProperty(obj, "age", 
+		 
+		{
+		    __proto__: null,
+			configurable: true,
+			enumerable: true,
+			//writable: true,
+			//value: 20,
+			set: function(nval) {
+			   a = nval;
+			},
+			get: function () {
+			   return a;
+			}
+			
+		});
+	 
+	    obj.age = 100;
+	
+	    console.log(obj.age);
+/*	
+		for(var k in obj) {
+		  console.log(k);
+		}
+	*/	
+		 
+		
+		
+		//obj.age = 10;
+		//delete obj.age;
+		console.log(obj)
+		
+		
+		 
+		
+	</script>
+</body>
+</html>

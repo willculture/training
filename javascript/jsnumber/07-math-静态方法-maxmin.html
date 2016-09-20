@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	    var Will = function () {
+		};
+		
+		/**
+		*  求MAX
+		*/
+		Will.max = function () {
+		  var max = 0;
+		 
+		  for (var i = 0; i < arguments.length; i++) {
+		    if(max < arguments[i]) {
+			  max = arguments[i];
+			}
+		  }	
+          return max;		 
+		}
+		
+		/**
+		*  求Min
+		*/
+		Will.min = function () {
+		  var min = 0;
+		 
+		  for (var i = 0; i < arguments.length; i++) {
+		    if(min > arguments[i]) {
+			  min = arguments[i];
+			}
+		  }	
+          return min;		 
+		}
+	
+	   
+	    // var arr = [10, 12, 8, 0, 6];
+	     
+		 //console.log(max);
+		 
+		 var rs = Will.min(10, 12, 8, 0, 6);
+		 console.log(rs);
+	
+	</script>
+</body>
+</html>

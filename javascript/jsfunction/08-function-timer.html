@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+   
+    <a href="javascript:stop();"> 停止 </a>
+
+	<script type="text/javascript">
+	    var outsign = setTimeout(function () {		    
+		    console.log("setTimeout");		   
+		}, 1000);
+		
+	    var valsign = setInterval(function () {
+		   console.log("setInterval");
+		}, 1000);
+		
+		function stop () {
+		   clearTimeout(outsign);
+		   clearInterval(valsign);
+		}
+	</script>
+</body>
+</html>

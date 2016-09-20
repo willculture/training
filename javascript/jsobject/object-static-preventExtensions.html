@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	   
+	   var obj = {
+	     name: "Tom",
+		 age: 20
+	   }
+	    
+		Object.preventExtensions(obj);
+		
+		obj.say = function () {
+		
+		}
+		
+		obj.name = "Sum";
+		
+		console.log(obj)
+		
+		obj.say();
+	
+	</script>
+</body>
+</html>

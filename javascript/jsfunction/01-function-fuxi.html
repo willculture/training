@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	    function fn1 (name) {
+		   console.log(name);
+		}
+		
+		var fn2 = function (name) {
+		   console.log(name);
+		}
+		
+		var fn3 = new Function("name", "console.log(name)");
+		
+		fn1("fn1");
+		fn2("fn2");
+		fn3("fn3");
+	   
+	</script>
+</body>
+</html>

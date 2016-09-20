@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+  
+    <table width="100%" border="1">
+    	<tr>
+    		<td>1</td>
+    	</tr>
+		<tr>
+    		<td>2</td>
+    	</tr>
+		<tr>
+    		<td>3</td>
+    	</tr>
+    </table>
+	
+	<div>
+		<p>fsdfsdfsdffsd</p>
+	</div>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+ 
+	<script type="text/javascript">
+	$("div").delegate("p", "hover click", function(){
+	    console.log("hello")
+		$(this).toggleClass("hover");
+	});
+	
+	</script>
+</body>
+</html>

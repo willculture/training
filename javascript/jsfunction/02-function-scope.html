@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	   
+	   
+	   var a = 10; // 全局变量
+	   
+	   function fn (name) {  //局部变量
+	     
+		 console.log(name);		 
+		 console.log(a);
+		 
+		 var age = 20;  //全局变量, 向上, 如果没有赋值, 他是无效的
+		 
+         function sub () {
+		    console.log(name, age);
+		 }		 
+		 
+		 sub();
+		 
+	   }
+	   
+	   fn("fn");
+	   
+	   console.log(name, age);
+	   
+	</script>
+	
+</body>
+</html>

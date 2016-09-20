@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         * {
+             box-sizing: border-box;
+         }
+         a {
+             text-decoration: none;
+             color: #3392FC;
+         }
+        .ios-alert, .ios-alert-cover {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .ios-alert-cover {
+            background-color: rgba(0 ,0, 0, 0.5);
+        }
+        .ios-alert-pop {
+            width: 250px;
+            height: 150px;
+            position: absolute;
+            left: calc(50% - 125px);
+            top: calc(50% - 75px);
+            background-image: radial-gradient(circle at 50% 50%, #fff 30%,#EFEFED 90%, #eee 90%);
+            border-radius: 5px;
+        }
+        .ios-alert-pop-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            height: calc(100% - 35px);
+        }
+        .ios-alert-pop-footer {
+            position: absolute;
+            width: 100%;
+            height: 35px;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-grow: 1;
+            border-top:#EBEBEB 1px solid ;
+        }
+        .ios-alert-pop-footer a {
+            flex-basis: 50%;
+            height: 100%;
+            line-height: 35px;
+            background-color: transparent;
+            text-align: center;
+            border-right:#EBEBEB 1px solid ;
+        }
+         .ios-alert-pop-footer a:first-child {
+             border-bottom-left-radius: 5px;
+         }
+         .ios-alert-pop-footer a:last-child {
+             border-bottom-right-radius: 5px;
+         }
+         .ios-alert-pop-footer a:hover {
+            background-image: linear-gradient(#ebebeb,#efefef);
+         }
+    </style>
+</head>
+<body>
+
+
+       this is body
+
+      <div class="ios-alert">
+          <div class="ios-alert-cover"></div>
+          <div class="ios-alert-pop">
+                <div class="ios-alert-pop-content">我是弹出框消息</div>
+                <div class="ios-alert-pop-footer">
+                    <a href="javascript:;">确定</a>
+                    <a href="javascript:;">取消</a>
+                </div>
+          </div>
+      </div>
+
+</body>
+</html>

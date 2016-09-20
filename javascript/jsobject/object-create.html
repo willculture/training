@@ -1,0 +1,57 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	/*
+	    var obj = {}; // new Object();
+		console.log(obj);
+		var c_obj = Object.create(Object.prototype);
+	    console.log(c_obj);
+		
+		var c_obj_null = Object.create(null);
+		console.log(c_obj_null); */
+		
+		/*
+		var obj = {
+		   name: "Tom"
+		};
+		
+		var c_obj = Object.create(obj); // c_obj ==> obj, 继承了obj的相关属性
+		
+		obj.name = "Apple";
+		
+		c_obj.name = "Tree";
+		
+		c_obj.__proto__.name = "China";
+		
+		console.log(c_obj.name);
+		console.log(obj.name); */
+		
+		/*function SuperClass(){
+		    
+		}
+		
+		var sc = Object.create(SuperClass.prototype); // new SuperClass();
+		
+		console.log(sc); */
+		
+		var c_obj = Object.create({name: "tom"}, {age: {
+		  value: 20,
+		  writable: true
+		},
+		 heigh: {
+		   value: 56
+		 }
+		});
+		c_obj.age = 21;
+		console.log(c_obj.name, c_obj.age, c_obj.heigh);
+		
+		
+	</script>
+</body>
+</html>

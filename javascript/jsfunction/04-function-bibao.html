@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+	      
+	      var outside = function () {
+		    var count = 0;			
+			var inside = function () {
+			    console.log("inside");
+				count++;				
+				console.log("count = " + count);
+			}	
+			return inside;			
+		  }
+		  
+		  var fn = outside();
+		  fn();
+		  fn();
+		  fn();
+		  
+		   
+	
+	</script> 
+</body>
+</html>

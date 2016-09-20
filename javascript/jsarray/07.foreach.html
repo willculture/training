@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	    
+		var arr = [230, 22, 11, 44];
+		
+		/*
+		arr.forEach(function(value, index, array){
+		   console.log(value, "-", index, "-", array);
+		   console.log(this);
+		}, this);*/
+		
+		
+		function calc() {
+		   this.sum = 0;
+		}
+		
+		calc.prototype.add = function(array) {
+		   arr.forEach(function(value){
+		       this.sum += value;
+			   console.log(this)
+		   }, this);
+		}
+		
+		var ca = new calc();
+		
+		ca.add(arr);
+		
+		console.log(ca.sum);
+		
+		
+	</script>
+</body>
+</html>

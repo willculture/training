@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script>
+	   window.onerror = function(msg, file, line, col, error) {
+	      console.log(msg, file, line, col)
+		  console.log(error);
+	   }
+	</script>
+</head>
+<body>
+	<script type="text/javascript">	
+	   try{
+	      var a = 21;
+		  if (a > 20) {
+		     throw new Error("a > 20");
+		  }
+	   }catch(e) {
+	      throw e;
+	     //console.log(e.name, e.message);
+	   }
+	   
+	   console.log("Program End");
+       //console.log(Error.prototype);
+	</script>
+	
+	
+</body>
+</html>

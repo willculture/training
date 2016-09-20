@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	      
+		  function Person (desc) {
+		     console.log(this.name, this.age, desc);
+		  }
+		  var obj = {name: "Tom", age: 20};
+		  Person.apply(obj,["我在说话"]);
+		  Person.call(obj,"我在说话");
+		  var rs = Person.bind(obj, "我在说话");		  
+		  rs();
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	   
+	   var a1 = [13, 22, 56];
+       var o = {x: 20};	   
+	   var result = a1.concat(o);	   
+	   a1[0] = 10;
+	   o.x = 10;	   
+	   result = result.concat([10, 20])
+	   result = result.concat([30,[100, 200]]);	   
+	   console.log(result);
+	   
+	   
+	   //////join
+       result = [1, 2, 4];	   
+	   result = result.join("+");
+	   
+	   console.log(result);
+	   
+	   
+	   
+	    
+	</script>
+</body>
+</html>

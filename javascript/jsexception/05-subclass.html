@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	    /*
+		console.log(ReferenceError);
+		console.log(ReferenceError.prototype);
+		
+		console.log("==============");
+		
+		console.log(SyntaxError);
+		console.log(SyntaxError.prototype); */
+		try {
+		    throw new RangeError("Range 发生错误");
+		}catch(e) {
+		  console.log(e); 
+		}finally {
+		  console.log("finally")
+		}
+
+		
+		
+		
+	</script>
+</body>
+</html>

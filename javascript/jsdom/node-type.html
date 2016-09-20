@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+  
+    <h2>hello</h2>
+   
+	<script type="text/javascript">
+	   
+	    console.log(Node.ELEMENT_NODE);
+		console.log(Node.DOCUMENT_NODE);
+		
+		
+		for (var k in Node) {
+		  console.log(k + " = " + Node[k]);
+		}
+		
+		
+		console.log("================");
+		
+		var h2 = document.querySelector("h2");
+	    console.log(h2.nodeType);
+		if(h2.nodeType === Node.ELEMENT_NODE) {
+		  console.log("h2 is  ELEMENT_NODE");
+		}
+	</script>
+</body>
+</html>

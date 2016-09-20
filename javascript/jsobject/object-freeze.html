@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+	<script>
+	
+	   var obj = {
+	      name: "Tom",
+		  age: 20
+	   }
+	   Object.freeze(obj);
+	   
+	   for(var k in obj) {
+	      console.log(k + " : " + obj[k]);
+	   }
+	   
+	   obj.age = 10;
+	   
+	   delete obj.age;
+	   
+	   console.log(obj.age);
+	
+	</script>
+	
+</body>
+</html>

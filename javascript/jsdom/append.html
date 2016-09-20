@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <a href="http://www.bianchengderen.com">编程的人</a>
+	<script type="text/javascript">
+	    var anode = document.querySelector("a");
+		
+		var textnode = document.createTextNode("专注编程开发");
+		
+		var strong = document.createElement("strong");
+		strong.appendChild(textnode);
+		
+		anode.appendChild(strong);
+		
+		
+		var span = document.createElement("span");
+		span.textContent = "   节点插入   ";
+		
+		anode.insertBefore(span, strong);
+		
+		 
+		
+	</script>
+</body>
+</html>

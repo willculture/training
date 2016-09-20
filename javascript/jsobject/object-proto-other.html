@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	    
+		  function SuperClass() {
+		  
+		  }
+		  
+		  function Person() {
+		  
+		  }
+		  
+		  function Child() {
+		     
+		  }
+		  
+		  Person.prototype = new SuperClass();
+		  
+		  var p = new Person();
+		  
+		  console.log(p)
+		  
+		  console.log(Child.prototype.isPrototypeOf(p));
+		  
+		  
+		  ///
+		  var obj = {
+		    name: "Tom"
+		  }
+		  
+		  Object.defineProperty(obj, "name", {
+		    enumerable: false,
+		  })
+		  
+		  console.log(obj.propertyIsEnumerable("name"));
+		  
+		  
+		  console.log(p.toString());
+		  console.log(p.valueOf());
+		  
+		   
+	
+	</script>
+</body>
+</html>
