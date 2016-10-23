@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+	   
+       var s = window.screen;
+
+	   console.log(s.prototype);
+
+	   console.log(s.availWidth);
+	   console.log(s.availHeight);
+
+	   console.log(s.width);
+	   console.log(s.height);
+	  
+	   console.log(s.availTop);
+	   console.log(s.availLeft);
+      
+	   console.log(s.orientation);
+
+
+	   s.fullScreen = true;
+
+
+	   s.orientation.onchange = function () {
+	      console.log("hello")
+	   }
+       
+       console.log(s.orientation.type);
+	
+	</script>
+</body>
+</html>
