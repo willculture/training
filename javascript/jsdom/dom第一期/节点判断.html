@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <h3>测试</h3>
+	<ul>	   
+		<li>编程的人</li>
+		<li name="">编程的人</li>
+		<li>专注编程开发</li>
+		<li>目前专注前端开发</li>
+	</ul>
+	<div>这里是说明</div>
+	
+	
+	<script type="text/javascript">
+	    /*
+		var body = document.querySelector("body");
+		var ul = document.querySelector("ul");
+		
+		var rs = body.contains(ul);
+		console.log(rs); */
+		
+		/*
+	   var ul = document.querySelector("ul"); // 本身为: 0
+	   var li = document.querySelector("li"); // 子节点: 20
+	   var body = document.querySelector("body"); // 父节点: 10
+	   var h3 = document.querySelector("h3"); //前一个: 2
+	   var div = document.querySelector("div"); //后一个: 4
+	   
+	   
+	   var po = ul.compareDocumentPosition(div);
+	   console.log(po) */
+	   
+	   var lis = document.querySelectorAll("li");
+	   
+	   var rs = lis[0].isEqualNode(lis[3]);
+	   console.log(rs);
+	
+	   
+	</script>
+</body>
+</html>

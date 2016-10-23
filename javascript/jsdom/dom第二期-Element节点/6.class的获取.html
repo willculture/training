@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+     
+	<a href="http://www.wutongwei.com" class="title box" data-foo="foo" style="display:inline-block; padding: 20px; background: #eee;" >吴统威的博客</a>
+	<script type="text/javascript">
+	     var a = document.querySelector("a");
+	    
+		 var list = a.classList;
+		 var names = a.className;
+		 console.log(list);
+		 console.log(names);
+		 
+		 //增加类名
+		 a.classList.add("hello");
+		 //移除
+		 a.classList.remove("title");
+		 
+		 //开关效应
+		 a.classList.toggle("test");
+		 a.classList.toggle("hello");
+		 
+		 
+		//是否包含某个类名
+		var b = a.classList.contains("test");
+		
+		console.log(b);
+		 
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <a href="http://www.google.com" name="hello">谷歌</a>
+	<a href="http://www.wutongwei.com" id="wutongwei" class="title">吴统威的博客</a>
+	<script type="text/javascript">
+	     var body = document.body;
+         
+         console.log(body.getElementsByTagName("a"));
+         console.log(body.getElementsByClassName("title"));
+         console.log(body.querySelectorAll("a"));
+         console.log(body.querySelector("#wutongwei"));
+		 
+         console.log(document.getElementById("wutongwei"));		 
+		 
+	</script>
+</body>
+</html>

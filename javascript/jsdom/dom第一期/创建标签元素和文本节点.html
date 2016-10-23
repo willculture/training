@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	    
+		var div = document.createElement("div");
+		div.setAttribute("title", "div标签");
+		div.innerHTML = "hello";
+		
+		
+		div.removeAttribute("title");
+		
+		console.log(div, div.getAttribute("title"));
+		
+		var text = document.createTextNode("编程的人");
+		console.log(text)
+		
+		
+		var attr = document.createAttribute("name");
+		attr.nodeValue = "hello"
+		console.log(attr);
+		
+		var cm = document.createComment("注释");
+		console.log(cm);
+		
+		
+		
+		
+	</script>
+</body>
+</html>

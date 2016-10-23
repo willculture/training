@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+     
+	<a href="http://www.wutongwei.com" class="title" data-foo="foo" style="display:inline-block; padding: 20px; background: #eee;" >吴统威的博客</a>
+	
+	<script type="text/javascript">
+	    var a = document.querySelector("a");
+	    
+		 var attrs = a.attributes;
+		 
+		 console.log(attrs);
+		 
+		 
+		 
+		 //获取属性
+		 var style = a.getAttribute("style");
+		 
+		 console.log(style);
+		 
+		 
+		 //设置属性(增加/修改)
+		 a.setAttribute("title", "吴统威的博客");
+		 
+		 //移除属性
+		 a.removeAttribute("data-foo");
+		 
+		 //判断是否有一个指定的属性
+		 var b = a.hasAttribute("data-foo");
+		
+		 console.log(b);
+		 
+	</script>
+</body>
+</html>

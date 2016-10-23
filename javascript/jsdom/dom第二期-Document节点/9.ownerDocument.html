@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+    <div>this is test</div>
+	
+	<iframe src="a.html" frameborder="0"></iframe>
+    
+	<script type="text/javascript">
+	   
+	     var div = document.querySelector("div");
+		 
+	       
+		 console.log(document.body.ownerDocument); 
+		 
+		 window.onload = function () {
+		     console.log(frames[0].document.body.ownerDocument === document)
+		 }
+		
+	     
+	</script>
+</body>
+</html>

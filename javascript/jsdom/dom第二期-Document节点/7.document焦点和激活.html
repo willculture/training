@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+    <div contenteditable="true">this is test</div>
+	
+	<textarea name="" id="" cols="30" rows="10">hello</textarea>
+    
+	<script type="text/javascript">
+	       
+		  var div = document.querySelector("div");
+		  
+		  div.focus();
+		  
+		   
+		  var ele = document.querySelector("textarea");
+		  
+		  console.log(document.activeElement);
+		  
+		  ele.focus();
+		  
+		  console.log(document.activeElement);
+		  
+		  
+		  //是否焦点在当前文档上
+		  var result = document.hasFocus();
+		  console.log(result);
+	
+	</script>
+</body>
+</html>

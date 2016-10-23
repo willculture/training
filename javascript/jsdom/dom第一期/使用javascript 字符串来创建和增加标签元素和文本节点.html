@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    
+	<a href="http://www.bianchengderen.com">编程的人</a>
+
+	<script type="text/javascript">
+	    
+		var anode = document.querySelector("a");
+		
+		/*
+		anode.innerHTML = "<span>hello 编程的人</span>";
+		
+		console.log(anode.innerHTML);
+		
+		//anode.outerHTML = "test";
+		
+		console.log(anode.innerHTML);
+		
+		console.log(anode.outerHTML);
+		
+		anode.textContent = "test";
+		
+		console.log(anode.textContent);
+		
+		console.log(anode.innerHTML); */
+		
+		anode.insertAdjacentHTML("beforebegin", "标签开始之前");
+		anode.insertAdjacentHTML("afterbegin", "开始之后");
+		anode.insertAdjacentHTML("beforeend", "结束之前");
+		anode.insertAdjacentHTML("afterend", "标签结束之后");
+		
+		
+	   
+		
+	</script>
+</body>
+</html>

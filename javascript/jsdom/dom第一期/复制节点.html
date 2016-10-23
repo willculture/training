@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <a href="http://www.bianchengderen.com">编程的人<strong>hello</strong></a>
+	<script type="text/javascript">
+	    
+		//cloneNode
+		
+		var anode = document.querySelector("a");
+		
+		var clone = anode.cloneNode(true);
+		//clone.textContent = "其他的节点";
+		
+		console.log(clone);
+		
+		
+		anode.parentNode.appendChild(clone);
+		
+		
+		
+	</script>
+</body>
+</html>

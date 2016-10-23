@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <a href="http://www.google.com" name="hello">谷歌</a>
+	<a href="http://www.wutongwei.com" id="wutongwei" class="title">吴统威的博客</a>
+	<script type="text/javascript">
+	     var all = document.querySelectorAll("a");//.title, #wutongwei | NodeList
+		 
+		 console.log(all)
+		 
+		 var atagname = document.getElementsByTagName("a"); // HTMLCollection
+		 
+		 console.log(atagname);
+		 
+		 var aclass = document.getElementsByClassName("title"); // HTMLCollection
+		 
+		 console.log(aclass);
+		 
+		 var aname = document.getElementsByName("hello"); // NodeList
+		 
+		 console.log(aname);
+		 
+		 var achild = document.body.children; //继承下来的 | // HTMLCollection
+		 
+		 console.log(achild)
+		 
+		  
+		 
+	</script>
+</body>
+</html>

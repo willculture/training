@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	    var keys = Object.keys(document).sort();
+		console.log(keys);
+		
+		
+		var all = [];
+		for (var k in document) {
+		    all.push(k);
+		}
+		
+		console.log(all.sort());
+		
+		
+		var ext = [];
+		for (var k in document) {
+		   if ( !document.hasOwnProperty(k) ) {
+		      ext.push(k);
+		   }
+		}
+		
+		console.log(ext.sort());
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+     
+	<a href="http://www.wutongwei.com" class="title" data-foo="foo" data-test-baidu="baidu" style="display:inline-block; padding: 20px; background: #eee;" >吴统威的博客</a>
+	<script type="text/javascript">
+	     var a = document.querySelector("a");
+	    
+		 console.log(a.dataset);
+		 
+		 
+		 var foo = a.dataset.foo;  //获取
+		 
+		 console.log(foo);
+		 
+		 a.dataset.google = "google"; //增加
+		 
+		 a.dataset.testBaidu = "test baidu"; //修改
+		 
+		 console.log(a.dataset);
+		 
+	</script>
+</body>
+</html>
