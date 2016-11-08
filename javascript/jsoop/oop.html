@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<input type="text" name="node" />
+	<input type="text" id="sub" />
+	<script>
+        var calc = function (ele) {
+		   this.result = 0;
+		   this.ele = ele;
+		}
+        calc.prototype.add = function (a, b) {
+		   this.result = a + b;
+		   this.show();
+		   return this;
+		}
+        calc.prototype.sub = function(a, b) {
+		   this.result = a - b;
+		   this.show();
+		   return this;
+		}
+        
+        calc.prototype.show = function () {
+		   document.querySelector(this.ele).value = this.result;
+		}
+       
+	    var c = new calc("input");
+		c.add(5, 8);
+
+
+		var c2 = new calc("#sub");
+		c2.sub(200, 180);
+	</script>
+</body>
+</html>
