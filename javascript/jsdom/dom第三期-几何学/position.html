@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	   
+         div {
+		   width: 300px;
+		   height: 300px;
+		   border: green 10px solid;
+		   padding: 20px;
+		   margin: 30px auto;
+		 }
+	
+	</style>
+</head>
+<body>
+	<div>this is test</div>
+	<script>
+	   
+        var div = document.querySelector("div");
+
+		console.log(div.top);
+		console.log(div.right);  // div.left + div.widht + padding + border
+		console.log(div.bottom); // div.top + div.height + padding + border
+		console.log(div.left); //
+	
+	</script>
+</body>
+</html>
