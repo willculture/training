@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         button{
+            display: inline-block;
+            margin: 100px;
+         }
+         body {
+           height: 1000px;
+         }
+    </style>
+</head>
+
+<body>
+
+    <button>click me</button>
+
+    <script>
+        var button = document.querySelector("button");
+
+        function showTips() {
+            var rect = button.getBoundingClientRect();
+            var tip = document.createElement("div");
+            tip.style.cssText = "position: fixed; color: red";
+            tip.textContent = "我是提示文字";
+            tip.style.top = rect.bottom + "px";
+            tip.style.left = rect.left + "px";
+            document.body.appendChild(tip);
+        }
+        button.onclick = function() {
+            showTips();
+        }
+    </script>
+
+</body>
+
+</html>

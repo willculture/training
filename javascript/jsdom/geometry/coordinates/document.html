@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+       .box {
+          width: 400px;
+          height: 400px;
+          border:#ff6600 1px solid;
+          margin: 0 auto;
+       }
+       .box-2 {
+          width: auto;
+          padding: 100px;
+          border: 2px red solid;
+          width: 300px;
+          height: 300px;
+          margin: 100px auto;
+          position: relative;
+          overflow: auto;
+       }
+  </style>
+</head>
+<body>
+<div class="box-2">
+     <div class="box">
+
+     </div>
+</div>
+     <script type="text/javascript">
+           var box = document.querySelector(".box");
+           var rect = box.getBoundingClientRect();
+
+           console.log(box.offsetTop, box.offsetLeft)
+           console.log(box.clientTop, box.clientLeft)
+
+
+           box.onclick = function(e) {
+             console.log("box", e)
+           }
+
+          document.onclick = function(e) {
+            console.log("document", e)
+          }
+
+           console.log(rect)
+           console.log("clientX", box.clientX)
+           console.log("clientY", box.clientY)
+           console.log("pageX", box.pageX)
+           console.log("pageY", box.pageY)
+
+     </script>
+
+</body>
+</html>
