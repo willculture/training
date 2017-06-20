@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+          body {
+            height: 900px;
+          }
+          .box {
+              height: 80px;
+              overflow-y: auto;
+          }
+    </style>
+  </head>
+  <body>
+
+      <div class="box">
+           flksdjflksjdfklsjdfkljsdklfjsdklfj <br>
+           sdlkjfskldjflskdjfklsdjfklsdjfklsdjklfjsdlkfjsdklfjsdlk <br>
+           flksdjflksjdfklsjdfkljsdklfjsdklfj <br>
+           sdlkjfskldjflskdjfklsdjfklsdjfklsdjklfjsdlkfjsdklfjsdlk <br>
+           flksdjflksjdfklsjdfkljsdklfjsdklfj <br>
+           sdlkjfskldjflskdjfklsdjfklsdjfklsdjklfjsdlkfjsdklfjsdlk <br>
+           flksdjflksjdfklsjdfkljsdklfjsdklfj <br>
+           sdlkjfskldjflskdjfklsdjfklsdjfklsdjklfjsdlkfjsdklfjsdlk <br>
+      </div>
+      <script type="text/javascript">
+          //window.onload = function() {
+              var doc = document.body;
+              console.log(doc.scrollTop)
+              console.log(window.scrollY)
+
+
+              //
+              var box = document.querySelector(".box")
+              console.log(box.scrollTop)
+
+          //}
+
+
+      </script>
+  </body>
+</html>

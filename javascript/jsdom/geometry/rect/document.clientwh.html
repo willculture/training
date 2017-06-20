@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {
+
+        position: relative;
+      }
+      .box {
+          margin:50px auto;
+          height: 100px;
+          width: 200px;
+          overflow: auto;
+          position: relative;
+          padding: 10px;
+          border: 10px #ff0033 solid;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <div class="box">
+        flksdjflskdjflksdjfklsdjflksdjflksdlfjksdlkfs
+        flksdjflksdjflksjdflksjdlfsd
+        fksdljflksdjflksdjflksdjflkjsd
+        fskldjflskdjflksdjflkjsd
+        fsdlkfjsdlkfjsldkfjsd
+        fskdlfjskldjfsd
+        fskdjlfjsldjflskdjlfs
+        fsdklfjsdlkfjsldkj
+    </div>
+
+
+    <script>
+
+
+        var box = document.querySelector(".box");
+
+
+        console.log(box.clientWidth, box.clientHeight)
+        console.log(box.offsetWidth, box.offsetHeight)
+        console.log(box.scrollWidth, box.scrollHeight)
+         
+
+        var brect = box.getBoundingClientRect();
+        console.log(brect.width, brect.height);
+
+        var bcrect = getComputedStyle(box);
+        console.log(bcrect.width, bcrect.height)
+
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+        body {
+            height: 2000px;
+        }
+    </style>
+  </head>
+  <body>
+    fsdljfklsdjfslkdjflskdjflksdjfklsdjklfsjdkl
+    <button type="button" name="button" class="btn">滚动</button>
+     <script type="text/javascript">
+         window.onload = function() {
+            window.scroll(0, 200)
+         }
+         document.querySelector(".btn").onclick = function(){
+              window.scrollBy(0, 200)
+              window.scrollBy(0, 100)
+         }
+     </script>
+  </body>
+</html>

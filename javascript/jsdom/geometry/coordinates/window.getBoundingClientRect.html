@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>getBoundingClientRect</title>
+    <style media="screen">
+         .rect {
+            padding: 20px;
+            background-color: yellow;
+         }
+         .inner {
+             width: 100px;
+             height: 100px;
+             background-color: #fff;
+         }
+    </style>
+  </head>
+
+  <body>
+
+      <div class="rect">
+
+            <div class="inner">
+
+            </div>
+
+      </div>
+
+      <script type="text/javascript">
+            //这里会报错, 因为这个方法压根就不是window的.
+            //console.log(window.getBoundingClientRect())
+            var rect = document.querySelector(".rect");
+
+            //getBoundingClientRect是元素的方法, 得到一个ClientRect对象,
+            //那为什么会拿到window来讲呢?
+            var bound = rect.getBoundingClientRect();
+
+            console.log(bound)
+
+
+            var inner_bound = document.querySelector(".inner").getBoundingClientRect();
+
+            console.log(inner_bound)
+
+      </script>
+
+  </body>
+</html>
