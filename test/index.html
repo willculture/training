@@ -2,53 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        body {
-            background: #eee;
-        }
-        
-        div {
-			overflow: auto;
-            width: 300px;
-            height: 300px;
-            border: green 10px solid;
-            margin: 20px 50px;
-            padding: 30px;
-            background: #fff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      background: #eee;
+    }
+
+    div {
+      overflow: auto;
+      width: 300px;
+      height: 300px;
+      border: green 10px solid;
+      margin: 20px 50px;
+      padding: 30px;
+      background: #fff;
+    }
+  </style>
 </head>
 
 <body>
-    <div>hello, this is box. 不的不说,当你习惯了vim给你的编程带来乐趣后，你将会越来越喜欢它！ 在以前刚开始用vim的时候，总觉的在vim里面，鼠标没有起到像其他编辑器那样的功能，不能通过鼠标控制vim下光标移动，而当时又不熟悉vim的移动命令，所以每次的移动，都的费很大的劲。 后来发现， vim也是可以使用鼠标来移动的， 实现这个功能只需要简单的在vimrc里面加上一条命令即可： set mouse=a 可没过多久，又发现了新的问题: 当你设定 set mouse=a之后，vim里面的内容，你是怎么拷贝都拷贝不到外面来，即从vim拷贝到系统的粘贴板上面。 当时很苦恼， 甚至有时，不的不看着vim里面的内容，然后手动的敲打出来。 敲了几次后，这样肯定不行， 而且聪明的vim怎么可能连这种事情都没想到。 查找了一些资料后， 终于找到解决方法了： 其实vim是支持与系统的粘贴板共享的，只是因为有的系统上没有安装而已。 像我的系统: Ubuntu9.10就没有安装， 马上安装： sudo apt-get install vim-gnome sudo apt-get install vim-gui-common sudo aptitude install vim-full 安装完之后： 从vim拷贝到系统粘贴板： 在v模式下选中（即visual模式，不明白的google一下）要拷贝的内容， 然后在命令模式下 "+y 这样， 选中的内容就拷贝到系统的粘贴板了。 而要把系统粘贴板上的内容拷贝到vim里面，也很简单, 在命令模式下 "+p 这样，系统粘贴板上面的内容就粘贴到vim里面去了。 在vim里面，系统的粘贴板跟vim的寄存器+是关联的，所以你对寄存器加+的任何复制和粘贴都直接影响到系统的粘贴板。 在vim还有十多个寄存器供你使用，用法跟 "+y , "+p一样。 要查看所有寄存器的内容 ， 只需要在命令模式下 :reg 即可。</div>
+  <div>hello, this is box. 不的不说,当你习惯了vim给你的编程带来乐趣后，你将会越来越喜欢它！ 在以前刚开始用vim的时候，总觉的在vim里面，鼠标没有起到像其他编辑器那样的功能，不能通过鼠标控制vim下光标移动，而当时又不熟悉vim的移动命令，所以每次的移动，都的费很大的劲。 后来发现， vim也是可以使用鼠标来移动的， 实现这个功能只需要简单的在vimrc里面加上一条命令即可： set mouse=a 可没过多久，又发现了新的问题: 当你设定 set mouse=a之后，vim里面的内容，你是怎么拷贝都拷贝不到外面来，即从vim拷贝到系统的粘贴板上面。
+    当时很苦恼， 甚至有时，不的不看着vim里面的内容，然后手动的敲打出来。 敲了几次后，这样肯定不行， 而且聪明的vim怎么可能连这种事情都没想到。 查找了一些资料后， 终于找到解决方法了： 其实vim是支持与系统的粘贴板共享的，只是因为有的系统上没有安装而已。 像我的系统: Ubuntu9.10就没有安装， 马上安装： sudo apt-get install vim-gnome sudo apt-get install vim-gui-common sudo aptitude install
+    vim-full 安装完之后： 从vim拷贝到系统粘贴板： 在v模式下选中（即visual模式，不明白的google一下）要拷贝的内容， 然后在命令模式下 "+y 这样， 选中的内容就拷贝到系统的粘贴板了。 而要把系统粘贴板上的内容拷贝到vim里面，也很简单, 在命令模式下 "+p 这样，系统粘贴板上面的内容就粘贴到vim里面去了。 在vim里面，系统的粘贴板跟vim的寄存器+是关联的，所以你对寄存器加+的任何复制和粘贴都直接影响到系统的粘贴板。 在vim还有十多个寄存器供你使用，用法跟
+    "+y , "+p一样。 要查看所有寄存器的内容 ， 只需要在命令模式下 :reg 即可。</div>
 </body>
 
 <script>
-  
-     var div = document.querySelector("div");
+  var div = document.querySelector("div");
 
-	 console.log("clientwidth", div.clientWidth);// width + padding - scrollbar
-	 console.log("clientheight", div.clientHeight);// height + padding
-	 console.log("clientLeft", div.clientLeft);
-	 console.log("clientTop", div.clientTop);
+  console.log("clientwidth", div.clientWidth); // width + padding - scrollbar
+  console.log("clientheight", div.clientHeight); // height + padding
+  console.log("clientLeft", div.clientLeft);
+  console.log("clientTop", div.clientTop);
 
-	 console.log("offsetwidth", div.offsetWidth); // width + padding + border
-	 console.log("offsetheight", div.offsetHeight); // height + padding + border
-	 console.log("offsetleft", div.offsetLeft);
-	 console.log("offsettop", div.offsetTop);
+  console.log("offsetwidth", div.offsetWidth); // width + padding + border
+  console.log("offsetheight", div.offsetHeight); // height + padding + border
+  console.log("offsetleft", div.offsetLeft);
+  console.log("offsettop", div.offsetTop);
 
-	 console.log("scrollWidth", div.scrollWidth); // width + padding - bar
-	 console.log("scrollHeight", div.scrollHeight); // height + padding - bar
-	 console.log("scrollTop", div.scrollTop); // scrollHeight - height - padding + bar
-	 console.log("scrollLeft", div.scrollLeft); // scrollWidth - width - padding + bar
-
+  console.log("scrollWidth", div.scrollWidth); // width + padding - bar
+  console.log("scrollHeight", div.scrollHeight); // height + padding - bar
+  console.log("scrollTop", div.scrollTop); // scrollHeight - height - padding + bar
+  console.log("scrollLeft", div.scrollLeft); // scrollWidth - width - padding + bar
 
 
 
-	 /////////////////////
 
-	 console.log("screen", window.screen);
+  /////////////////////
+
+  console.log("screen", window.screen);
 </script>
+
 </html>
