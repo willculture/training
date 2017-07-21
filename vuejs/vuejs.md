@@ -1069,6 +1069,18 @@ export default {
 
 ## 完整代码讲解
 
+1. 目的
+
+2. 布局
+
+3. 结构
+
+4. 代码
+
+5. 效果
+
+<http://svencreations.com/stomp/index-youtube-countdown.html>
+
 ## 其他工具和插件
 
 vue-router - 官方路由插件 vue-resource 处理网页请求 vue-async-data - 异步数据加载 vue-validator - 表单验证插件 vue-devtools - 谷歌开发工具扩展 vue-touch - 手势插件（hammerjs） 更多的 <https://github.com/vuejs/awesome-vue#components--libraries>
