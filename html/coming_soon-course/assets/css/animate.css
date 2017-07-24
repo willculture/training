@@ -1,0 +1,26 @@
+@keyframes rtol {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes ttob {
+  0% {
+    top: -50%;
+  },
+  100% {
+    top: 50%;
+  }
+}
+
+
+.rtol {
+  animation: rtol 1s 1;
+}
+
+.ttob {
+  animation: ttob 1s 1;
+}

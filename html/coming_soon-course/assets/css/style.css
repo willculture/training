@@ -1,0 +1,193 @@
+#app {
+  height: 100%;
+}
+.btn {
+  display: inline-block;
+  background-color: #eee;
+  color: #000;
+  border: #eee 1px solid;
+  font-size: 16px;
+  padding: 15px 30px;
+}
+.btn-white {
+
+}
+.btn-green {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+.btn-green:hover {
+  color: #fff;
+}
+
+.close {
+   font-size: 30px;
+   position: absolute;
+   right: 10px;
+   top: 0;
+}
+
+aside, main {
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+aside {
+  background-color: #34495e;
+  padding: 80px;
+}
+
+
+.aside-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.aside-bg canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.logo, .comesoon {
+  position: relative;
+  z-index: 2;
+}
+
+.logo {}
+
+.comesoon-head h3{
+  color: #fff;
+  font-size: 38px;
+}
+
+.comesoon-body {
+  padding: 30px 0;
+  line-height: 30px;
+}
+
+.comesoon-foot .btn {
+  margin-right: 20px;
+}
+
+.smedia {
+  margin-top: 100px;
+  position: relative;
+  z-index: 2;
+}
+.smedia .icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/** main **/
+main {
+  background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  overflow-y: auto;
+  min-height: 100%;
+}
+
+.main-body {
+  display: block;
+  background-color: #fff;
+  padding: 80px;
+  position: relative;
+
+}
+
+.main-body .close {
+  color: #000;
+}
+
+/**course**/
+.course {
+  margin-top: 40px;
+}
+.course-title {
+  font-size: 22px;
+  color: #000;
+  font-weight: 500;
+}
+.course-body p {
+  padding: 10px 0;
+}
+
+.course-list {
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-top: 8px;
+}
+.course-item {
+  float: left;
+  width: 33.3333%;
+  padding: 5px;
+  color: #888;
+}
+
+/** feedback **/
+
+.feedback {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+.feedback-bg {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+}
+.feedback-body {
+  position: absolute;
+  z-index: 2;
+  background-color: #000;
+  width: 600px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -200px;
+  padding: 50px;
+}
+
+.feedback-body h4 {
+  color: #fff;
+}
+.feedback-body p {
+   margin: 20px 0;
+   line-height: 30px;
+}
+.feedback-body input {
+   width: 100%;
+   background: #000;
+   border: #fff 1px solid;
+   padding: 15px 10px;
+   margin-bottom: 20px;
+   color: #888;
+}
+
+
+ @media (max-device-width: 600px) {
+   body {
+     overflow-y: auto;
+   }
+   aside, main {
+     width: 100%;
+     height: auto;
+   }
+   aside, .main-body {
+     padding: 20px;
+   }
+   .feedback-body {
+     width: 500px;
+     margin-left: -250px;
+   }
+ }

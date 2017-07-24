@@ -1071,6 +1071,10 @@ export default {
 
 1. 目的
 
+  - vue模板技术
+  - vue指令
+  - vue数据绑定
+
 2. 布局
 
 3. 结构
@@ -1083,4 +1087,9 @@ export default {
 
 ## 其他工具和插件
 
-vue-router - 官方路由插件 vue-resource 处理网页请求 vue-async-data - 异步数据加载 vue-validator - 表单验证插件 vue-devtools - 谷歌开发工具扩展 vue-touch - 手势插件（hammerjs） 更多的 <https://github.com/vuejs/awesome-vue#components--libraries>
+- vue-router - 官方路由插件
+- vue-resource 处理网页请求
+- vue-async-data - 异步数据加载
+- vue-validator - 表单验证插件
+- vue-devtools - 谷歌开发工具扩展
+- vue-touch - 手势插件（hammerjs） 更多的 <https://github.com/vuejs/awesome-vue#components--libraries>
