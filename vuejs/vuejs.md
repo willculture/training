@@ -1,4 +1,33 @@
 # Keep Learning Vuejs 2.0
+<!-- TOC START min:1 max:3 link:true update:true -->
+- [Keep Learning Vuejs 2.0](#keep-learning-vuejs-20)
+  - [vue介绍](#vue)
+  - [vue特点](#vue-1)
+  - [Vue.js的使用](#vuejs)
+  - [VUE-CLI实现](#vue-cli)
+  - [基本语法](#)
+    - [简单例子， 初始化vue](#-vue)
+    - [条件渲染](#-1)
+    - [对比v-if v-show](#v-if-v-show)
+    - [循环](#-2)
+  - [事件处理](#-6)
+  - [表单输入](#-7)
+  - [样式处理](#-8)
+  - [计算属性](#-9)
+  - [watcher](#watcher)
+  - [组件开发](#-10)
+    - [组件的使用](#-11)
+    - [props属性](#props)
+    - [不在props中定义的属性](#props-1)
+    - [自定义事件](#-12)
+    - [表单中的自定义事件，定制自己的v-model](#v-model)
+    - [通过slot来分配内容](#slot)
+    - [动态组件](#-13)
+  - [完整代码讲解](#-14)
+  - [其他工具和插件](#-15)
+
+<!-- TOC END -->
+
 
 ## vue介绍
 
