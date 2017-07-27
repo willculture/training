@@ -9,13 +9,15 @@
       VUEJS使用
       <div id="app">
          {{msg}}
+         <img :src="icon" alt="">
       </div>
 
       <script type="text/javascript">
           var vue = new Vue({
             el:"#app",
             data: {
-              msg: "您好， Vuejs!"
+              msg: "您好， Vuejs!",
+              icon: "https://cid-f64b54753766df5c.users.storage.live.com/users/0xf64b54753766df5c/myprofile/expressionprofile/profilephoto:UserTileStatic/p?ck=1&ex=720&fofoff=1&sid=228EA99E17D46522233DA352167564B4"
             }
           })
       </script>
