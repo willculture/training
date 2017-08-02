@@ -10,9 +10,18 @@
       <div id="app">
          {{msg}}
          <img :src="icon" alt="">
+         <subchild></subchild>
       </div>
 
       <script type="text/javascript">
+
+          Vue.component("subchild", {
+            template: "<div>我是子组件 <childdiv></childdiv></div>",
+            components: {
+              "childdiv": { template: "<div>child 点击我</div>" }
+            }
+          })
+
           var vue = new Vue({
             el:"#app",
             data: {
