@@ -9,13 +9,24 @@
       VUEJS使用
       <div id="app">
          {{msg}}
+         <img :src="icon" alt="">
+         <subchild></subchild>
       </div>
 
       <script type="text/javascript">
+
+          Vue.component("subchild", {
+            template: "<div>我是子组件 <childdiv></childdiv></div>",
+            components: {
+              "childdiv": { template: "<div>child 点击我</div>" }
+            }
+          })
+
           var vue = new Vue({
             el:"#app",
             data: {
-              msg: "您好， Vuejs!"
+              msg: "您好， Vuejs!",
+              icon: "https://cid-f64b54753766df5c.users.storage.live.com/users/0xf64b54753766df5c/myprofile/expressionprofile/profilephoto:UserTileStatic/p?ck=1&ex=720&fofoff=1&sid=228EA99E17D46522233DA352167564B4"
             }
           })
       </script>
