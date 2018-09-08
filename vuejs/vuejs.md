@@ -1,5 +1,40 @@
 # Keep Learning Vuejs 2.0
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [Keep Learning Vuejs 2.0](#keep-learning-vuejs-20)
+	- [vue介绍](#vue介绍)
+	- [vue特点](#vue特点)
+	- [Vue.js的使用](#vuejs的使用)
+	- [VUE-CLI实现](#vue-cli实现)
+	- [基本语法](#基本语法)
+		- [简单例子， 初始化vue](#简单例子-初始化vue)
+		- [条件渲染](#条件渲染)
+			- [v-if](#v-if)
+			- [v-else](#v-else)
+			- [v-ele-if](#v-ele-if)
+			- [v-show](#v-show)
+		- [对比v-if v-show](#对比v-if-v-show)
+		- [循环](#循环)
+			- [数组](#数组)
+			- [范围](#范围)
+			- [对象](#对象)
+	- [事件处理](#事件处理)
+	- [表单输入](#表单输入)
+	- [样式处理](#样式处理)
+	- [计算属性](#计算属性)
+	- [watcher](#watcher)
+	- [组件开发](#组件开发)
+		- [组件的使用](#组件的使用)
+		- [props属性](#props属性)
+		- [不在props中定义的属性](#不在props中定义的属性)
+		- [自定义事件](#自定义事件)
+		- [表单中的自定义事件，定制自己的v-model](#表单中的自定义事件定制自己的v-model)
+		- [通过slot来分配内容](#通过slot来分配内容)
+		- [动态组件](#动态组件)
+	- [完整代码讲解](#完整代码讲解)
+	- [其他工具和插件](#其他工具和插件)
+
+<!-- /TOC -->
 ## vue介绍
 
 Vue.js 是一套构建用户界面的渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue 也完全能够为复杂的单页应用程序提供驱动。
@@ -355,11 +390,52 @@ change(str, e) {
 
 这样我们就可以在事件函数中传递值。但是这样的话，要获取原始事件对象，就通过$event作为参数传递到函数。
 
-下面我们来学习一下事件修饰符。在我们原始事件中，我们会阻止一些默认事件。比如event.preventDefault() 或 event.stopPropagation()。当然在VUEJS中也可以这样使用。 不过VUEJS给了更加方便的使用方式。比如v-on:click.stop或者v-on:keyup.enter等等。修饰符也可以串联，如： v-on:click.stop.prevent或者v-on:click.prevent.stop。 这里注意一下串联的顺序不一样，其执行的结果也有所不同。 下面是一些修饰符 .stop .prevent .capture .self .once
+下面我们来学习一下事件修饰符。
 
-包含键修饰符 v-on:keyup.13 这种后面跟键的数值， 这种方式记住键盘，会比较麻烦。VUE也提供了别名比如，v-on:keyup.enter,这种写法还可以简写成@keyup.enter 下面是别名 .enter .tab .delete (捕获 "删除" 和 "退格" 键) .esc .space .up .down .left .right
+在我们原始事件中，我们会阻止一些默认事件。比如event.preventDefault() 或 event.stopPropagation()。当然在VUEJS中也可以这样使用。 不过VUEJS给了更加方便的使用方式。
 
-组合按键 .ctrl .alt .shift .meta 比如： @keyup.alt.21, @click.ctrl. 但是要注意一点事，键盘事件@key.alt这种形式，单纯按下alt是不会触发事件，需要配合其他按键
+比如v-on:click.stop或者v-on:keyup.enter等等。
+
+修饰符也可以串联，
+
+如： v-on:click.stop.prevent或者v-on:click.prevent.stop。
+
+这里注意一下串联的顺序不一样，其执行的结果也有所不同。
+
+下面是一些修饰符
+
+>.stop
+.prevent
+.capture
+.self
+.once
+
+包含键修饰符 v-on:keyup.13 这种后面跟键的数值.
+
+这种方式记住键盘，会比较麻烦。VUE也提供了别名.
+
+比如，v-on:keyup.enter,这种写法还可以简写成@keyup.enter
+
+下面是别名
+
+>.enter
+.tab
+.delete (捕获 "删除" 和 "退格" 键)
+.esc
+.space
+.up
+.down
+.left
+.right
+
+
+组合按键
+>.ctrl
+.alt
+.shift
+.meta
+
+比如： @keyup.alt.21, @click.ctrl. 但是要注意一点事，键盘事件@key.alt这种形式，单纯按下alt是不会触发事件，需要配合其他按键
 
 ## 表单输入
 
@@ -733,7 +809,11 @@ props: {
 
 ### 自定义事件
 
-$on - 绑定事件 $emit - 触发事件 自定义事件，由着两个函数来处理。我们来看两个例子。最后我们看个sync.
+$on - 绑定事件
+
+$emit - 触发事件 自定义事件，
+
+由着两个函数来处理。我们来看两个例子, 最后我们看个sync.
 
 1. 下面是父子组件的事件处理。 父组件， 通过v-on:自定义事件名，来定义事件
 
