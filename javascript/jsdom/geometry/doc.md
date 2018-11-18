@@ -264,13 +264,14 @@ document.body.onclick = function(e) {
 }
 ```
 这里包含了滚动的区域.可以得出:
-> e.clientX + elem.scrollLeft = e.pageX
-> e.clientY + elem.scrollTop = e.pageY
+> e.clientX + elem.parentNode.scrollLeft = e.pageX
+
+> e.clientY + elem.parentNode.scrollTop = e.pageY
 
 ![](assets/doc-fc9608bd.png)
 
 #### e.screenX, e.screenY
-针对显示器屏幕, 点击所在位置到屏幕的原点处
+针对显示器屏幕, 点击所在位置到屏幕的原点处. 针对可见窗口的区域.
 ```html
 <!DOCTYPE html>
 <html>
@@ -304,7 +305,8 @@ document.body.onclick = function(e) {
 ![](assets/doc-d0c64161.png)
 
 #### e.layerX, e.layerY
-针对内容占用区域, 点击所在位置到文档原点处
+针对内容占用区域, 点击所在位置到最近的position元素(包含它自己)的原点处. 这里我们针对目标元素而言.
+从layer的意义来说, 是针对某一层来说.
 ```javascript
 document.body.onclick = function(e) {
     console.log(e.layerX, e.layerY)
@@ -319,8 +321,9 @@ document.body.onclick = function(e) {
     console.log(e.x, e.y)
 }
 ```
+
 #### e.offsetX, e.offsetY
-针对当前点击所在位置到最近目标对象的原点而言
+针对当前点击所在位置到最近目标对象(当前元素)的原点而言
 
 ```javascript
 document.body.onclick = function(e) {
@@ -328,7 +331,8 @@ document.body.onclick = function(e) {
 }
 ```
 
-### 正对于DOM坐标机制
+### 针对于DOM坐标机制
+
 #### elem.clientTop, elem.clientLeft
 这里的clientLeft, clientTop, 分别是该元素的border-left, border-top.
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+     body {
+       background: pink;
+       padding: 100px;
+       position: relative;
+     }
+     .box {
+       background: #eee;
+       height: 500px;
+       position: relative;
+     }
+
+     .box-red {
+       display: inline-block;
+       width: 100px;
+       height: 100px;
+       background: red;
+       margin-left: 100px;
+       margin-top: 20px;
+     }
+
+     .box-green {
+       display: inline-block;
+       position: inherit;
+       width: 200px;
+       height: 100px;
+       background-color: green;
+     }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="box-red"></div>
+    <div class="box-green"></div>
+  </div>
+
+  <script>
+     document.body.onclick = function(e) {
+       
+       console.log(e.target, 'offset:', e.offsetX, e.offsetY);
+     }
+  </script>
+</body>
+</html>
