@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function Animal(name, age) {
+    //   this.name = name;
+    //   this.age = age;
+    //   this.sing = function() {
+    //     console.log(this.name, "正在唱歌");
+    //   }
+    // }
+
+    // Animal.prototype = {
+    //   walk: function() {
+    //     console.log(this.name, "正在走路");
+    //   },
+    //   dance: function() {
+    //     console.log(this.name, "正在跳舞");
+    //   }
+    // }
+
+
+
+    // const animal = new Animal('小狗', 2); //__proto__
+
+    // console.log(animal)
+
+    // animal.walk();
+
+    // animal.dance();
+
+    // animal.sing();
+
+    // animal.toString();
+
+
+
+    // function Snake(name, age) {
+    //   Animal.call(this, name, age);
+    // }
+
+    // Snake.prototype = Object.create(Animal.prototype);
+    // Snake.prototype.constructor = Snake;
+  
+
+
+    // function Horse(name, age) {
+    //   Animal.call(this, name, age);
+    // }
+
+    // Horse.prototype = Object.create(Animal.prototype);
+  
+
+
+    // //
+    // const sam = new Snake('same', 1);
+
+    // const tom = new Horse('tom', 2);
+
+    // // sam.walk();
+
+    // tom.dance();
+
+    // console.log("sam", sam);
+    // console.log("tom", tom);
+    
+
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.dance = function() {
+      console.log("正在跳舞")
+    }
+   
+  }
+
+  walk() {
+    console.log(this.name, "正在走路")
+  }
+
+}
+
+
+class Snake extends Animal {
+   walk() {
+     console.log("子类覆写父类的walk")
+   }
+}
+
+const sam = new Snake("sam", 0);
+
+sam.walk();
+sam.dance();
+
+console.log(sam)
+
+
+
+  </script>
+</body>
+</html>
