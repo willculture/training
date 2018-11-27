@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div, ul, li {
+      box-sizing: border-box;
+    }
+    ul, li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .slider {
+      width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .slider-show {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .slider-show img { 
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    .slider-leftControl, .slider-rightControl {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 60px;
+      background: #eee;
+    }
+
+    .slider-leftControl {
+      left: 10px;
+    }
+
+    .slider-rightControl {
+      right: 10px;
+    }
+
+    .slider-clickShow {
+      position: absolute;
+      height: 30px; 
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+     .slider-clickShow  a {
+       display: inline-block;
+       width: 10px;
+       height: 10px;
+       border-radius: 100%;
+       background: rgba(0, 0, 0, 0.5);
+       margin-right: 10px;
+     }
+
+     .slider-clickShow .click-active {
+       background-color: #ff6600;
+     }
+
+  </style>
+</head>
+<body>
+
+    <div class="slider">
+        <div class="slider-show">
+          <ul>
+            <li><img src="https://img1.360buyimg.com/pop/jfs/t28036/347/457164651/68267/9350c896/5bf4fe43N5ba18891.jpg" alt=""></li>
+            <li><img src="https://m.360buyimg.com/babel/jfs/t26590/264/2092479568/73312/568a8da1/5bf7f3bdN4340cbb9.jpg" alt=""></li>
+            <li><img src="https://m.360buyimg.com/babel/jfs/t29440/304/480983048/99087/784ae39a/5bf4c2cdN0bb11547.jpg" alt=""></li>
+          </ul>
+        </div>
+        <div class="slider-leftControl"></div>
+        <div class="slider-rightControl"></div>
+        <div class="slider-clickShow"></div>
+     </div>
+   
+  <script>
+  
+    (function(win) {
+       function Slider(options) {
+         this.el_showContent = document.querySelector(".slider-show");
+         this.el_leftControl = document.querySelector(".slider-leftControl");
+         this.el_rightControl = document.querySelector(".slider-rightControl");
+         this.el_showControl = document.querySelector(".slider-clickShow");
+         this.index = 0;
+
+         this.init();
+       }
+ 
+       Slider.prototype = {
+
+         init: function init () {
+           //初始化界面 
+           this.list = this.el_showContent.querySelectorAll("li");
+           this.size = this.list.length;
+           
+           this.clickNodes = [];
+           this.list.forEach(function(item, index) { 
+             item.style.display = "none";
+
+             let atag = document.createElement("a");
+             atag.href = "javascript:void(0);";
+              
+             if(index === this.index) {
+               atag.classList.add("click-active");  
+               item.style.display = 'block';
+             }
+             this.el_showControl.appendChild(atag) 
+             this.clickNodes.push(atag);  
+
+           }.bind(this))
+           
+           //初始化事件
+           this.el_leftControl.addEventListener("click", this.leftMove.bind(this));
+           this.el_rightControl.addEventListener("click", this.rightMove.bind(this));
+           this.clickNodes.forEach(function(item) {
+             item.addEventListener("click", this.clickMove.bind(this))
+           }.bind(this))
+         },
+
+         move: function move() {
+          //  this.list[this.index].style.display = "block";
+           this.list.forEach(function(item, index) {
+             item.style.display = "none";
+             if(this.index === index) {
+               item.style.display = "block";
+             }
+           }.bind(this))
+
+
+           this.clickNodes.forEach(function(item, index) {
+             item.classList.remove('click-active');
+             if(this.index === index) { 
+              item.classList.add('click-active');
+             }
+           }.bind(this))
+         },
+
+         leftMove: function leftMove() {
+           console.log("left")
+           this.index--;
+           if(this.index < 0) {
+             this.index = 0;
+           }
+
+           this.move()
+         },
+
+         rightMove: function rightMove() {
+           console.log("right")
+           this.index++;
+           if(this.index >= this.size) {
+             this.index = this.size - 1;
+           }
+
+           this.move();
+         },
+
+         clickMove: function clickMove(e) {
+            console.log(e);
+            const clicka = e.target; 
+            this.index = this.clickNodes.indexOf(clicka);
+            this.move();
+         }
+       }
+
+       win.WaySlider = Slider;
+
+
+    })(window)
+
+
+    new WaySlider();
+  
+  </script>
+</body>
+</html>

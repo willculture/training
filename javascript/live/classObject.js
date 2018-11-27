@@ -80,3 +80,4 @@ const sam = new Snake("sam", 0);
 
 sam.walk();
 sam.dance();
+
