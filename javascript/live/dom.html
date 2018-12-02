@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body name="body" hello="world">
+
+  fsjdlfkjsdkljfsldkjl
+
+   <!--hello world-->
+  <div class="box" name="hello">
+    <p>this is p</p>
+  </div>
+
+  <a href='fjdkf'>afdlfjdk</a>
+  
+
+  <script>
+
+    // Node -> Element -> HTMLElement
+    // NodeList
+
+    // Div -> HTMLDIVElement
+    window.onload = function() {
+        Object.defineProperty(Node.prototype, 'hello', {
+          get() {
+            console.log(this)
+            return this.getAttribute("hello")
+          }
+        })
+        
+        const childs = document.body.childNodes;
+        Array.prototype.forEach.call(childs, function(item) {
+          // if(item.nodeType === Node.TEXT_NODE) {
+            console.log(item.nodeName, item.nodeType)
+          // }
+        });
+
+
+        const firstNode = document.body.firstChild;
+        const lastNode = document.body.lastChild;
+        console.log("firstNode", firstNode);
+        console.log("lastNode", lastNode);
+
+        const prev = document.body.previousSibling;  
+        const next = document.body.nextElementSibling;
+
+        console.log(prev, next)
+
+        console.log("-------")
+        const attrs = document.body.attributes;
+        console.log(attrs)
+
+
+        console.log(document.body.hello)
+
+
+        //////
+        const h3 = document.createElement('h3');
+        h3.textContent = 'hello, world'
+        document.body.replaceChild(h3, document.body.firstChild);
+
+
+
+        const strong = document.createElement('strong');
+        strong.textContent = "this is strong tag";
+
+        document.body.insertBefore(strong, h3);
+
+
+        const em = document.createElement('em');
+        em.textContent = "hello em"
+
+        document.body.appendChild(em);
+
+        document.body.removeChild(em);
+
+
+        console.log(document.body.hasAttributes())
+
+
+        //document
+
+        console.log(document.nodeType)
+        
+        document.documentElement.textContent = "hello, doucment";
+
+        const fragment = document.createDocumentFragment();
+        const bd = document.createElement('body');
+        bd.textContent = 'hello fragment';
+        fragment.appendChild(bd);
+
+        document.documentElement.appendChild(fragment)
+        bd.appendChild(document.createTextNode("hello textnode"));
+        bd.appendChild(document.createComment('这里是注释'));
+        // bd.appendChild(document.createAttribute("hello", "hellobd"));
+        bd.setAttribute("class", "hello")
+        bd.id = "helloid"
+        bd.className = "hello wrold"
+
+        ///
+
+        // document.getElementById(""); //id='' -> Element
+        // document.getElementsByTagName("") // tag -> NodeList
+        // document.getElementsByName("") // name -> NodeList
+        // document.getElementsByClassName("") // -> NodeList
+
+        // document.querySelector(""); // ->Element
+        // document.querySelectorAll("");  // ->NodeList
+
+        // document.body.setAttribute(key, value)
+        // document.body.getAttribute(key)
+        // document.body.hasAttribute(key)
+        // document.body.removeAttribute(key)
+      
+
+        console.log(document.children)
+        console.log(document.firstElementChild, document.lastElementChild)
+
+        document.body.prepend(document.createTextNode("fjsldjfklsdjkfljsdlkjf"), "fjsdljfklsdjlfsd", "=====|====", "fsdlkjfsdlkjfl");
+        document.body.append("<h3>fsdfsdfsd</h3>")
+
+        console.log(document.body.parentElement)
+        console.log("=====================");
+        console.log(document.body.localName, document.body.tagName, document.body.id, document.body.className, document.body.classList, document.body.attributes)
+
+
+console.log(document.plugins);
+
+
+
+
+    }
+
+
+
+   
+     
+  </script>
+  <p>
+    flksdjflsd
+  </p>
+     fdsfsdfsdfsdfsdfsd       
+</body>
+</html>

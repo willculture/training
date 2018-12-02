@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 'use strict'
+
+    var obj = {
+      key: "value"
+    }
+
+    function Animal(name, age) {
+      this.name = name;
+      this.age = age; 
+      console.log(this)
+    }
+
+    // function Person(name, age) {
+    //   Animal.call(this, name, age)
+    // }
+
+
+     Animal =  Animal.bind(obj);
+     Animal("name", 20);
+
+    //  Animal("name", 0)
+
+    // Animal.call(obj, 'animal', 2);
+
+    // Animal.call(Person, 'animal', 1);
+
+
+
+    // console.log(Person.name, Person.age);
+
+
+    // var person = new Person('person', 20);
+
+
+
+
+
+     
+    
+  </script>
+</body>
+</html>

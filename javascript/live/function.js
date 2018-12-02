@@ -1,21 +1,35 @@
 //初始化参数
 
-function initArg(name = 'name', age = 0, ...arg) {
-  //  name = name || "name";
-  //  age = age || 0;
-   console.log(name, age, arg);
+// function initArg(name = 'name', age = 0, ...arg) {
+//   //  name = name || "name";
+//   //  age = age || 0;
+//    console.log(name, age, arg);
+// }
+// const defaultValue = {name: 'name', age: 0};
+
+// function initArg2(obj = defaultValue) {
+
+//   console.log(obj === defaultValue)
+
+//   obj.name = "object";
+
+// }
+
+// initArg2();
+
+// console.log(defaultValue)
+let obj = {
+  name: "tom"
 }
-const defaultValue = {name: 'name', age: 0};
 
-function initArg2(obj = defaultValue) {
-
-  console.log(obj === defaultValue)
-
-  obj.name = "object";
-
+function say(content) {
+   console.log(this, content)
 }
 
-initArg2();
 
-console.log(defaultValue)
+// say("hello");
+
+say.call(undefined, "world")
+
+// say.apply(null, ["!"])
 
